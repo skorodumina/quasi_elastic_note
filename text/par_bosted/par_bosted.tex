@@ -1,0 +1,48 @@
+
+\newpage
+\chapter{Peter Bosted Parameterization}
+\mbox{}\vspace{-\baselineskip}
+
+
+The set of Bosted parameterizations of inclusive cross sections off different targets~\cite{Bosted_fit,Bosted:2007xd} contains the modeling of the quasi-elastic cross section off various nuclei (including the deuteron). This modeling is based on the method of the quasi-elastic cross section estimation that was developed in the framework of the Relativistic Fermi Gas model and described in Refs.~\cite{Amaro:2004bs,Alberico:1988bv,Donnelly:1998xg}. The general idea of this method is sketched below. 
+
+The differential cross section of quasi-elastic scattering of a nucleus can be calculated in the laboratory frame as\footnote[2]{See also App.~\ref{app_formalism} for the $ep$ scattering formalism.}
+\begin{equation}
+\frac{d^{2}\sigma}{d\Omega dE'} = F^{QE}\left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott}\left (v_{L}G_{L}^{QE} + v_{T}G_{T}^{QE} \right ),
+\end{equation}
+where %\vspace{-1em}
+\begin{itemize}
+\item the quantity in the square brackets is the Mott cross section of the electron scattering off a point-like charge that is defined as
+\begin{equation}
+\left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott} = \left [ \frac{2\alpha E'}{Q^{2}}\cos \frac{\theta_{e'}}{2} \right ]^{2},
+\label{eq:mott}
+\end{equation}
+with $E'$ and $\theta_{e'}$ being the energy and the polar angle of the scattered electron in the Lab frame, $Q^{2}$ the photon virtuality, and $\alpha=1/137$ the fine structure constant;   %\vspace{-0.5em}
+\item the functions $G_{L}^{QE}$ and $G_{T}^{QE}$ are defined as
+\begin{equation}
+\begin{aligned}
+&G_{L}^{QE}&=~&\frac{\kappa}{2\tau}\left ( ZG_{E_{p}}^{2}+NG_{E_{n}}^{2} \right )~~\textrm{and}\\
+&G_{T}^{QE}&=~&\frac{\tau}{\kappa}\left ( ZG_{M_{p}}^{2}+NG_{M_{n}}^{2} \right ),
+\label{eq:eee}
+\end{aligned}
+\end{equation}
+where $\tau = \frac{|Q^{2}|}{4m_{N}^{2}}$ and $\kappa = \frac{q}{2m_{N}}$ with the photon momentum magnitude $q$ and the nucleon mass $m_{N}$. The quantities $Z$ and $N$ are the numbers of protons and neutrons in the nucleus, respectively, and $G_{E}$ and $G_{M}$ are so-called Sachs electric and magnetic form factors that are related to the charge and magnetization density of the corresponding nucleon, respectively;  %\vspace{-0.25em}
+\item  $v_{L} = \left [\frac{\tau}{\kappa^{2}} \right ]^{2} $ and $v_{T} = \frac{\tau}{2\kappa^{2}} +\tan^{2}{\frac{\theta_{e'}}{2}}$ are the kinematic factors and%\vspace{-0.25em} 
+\item $F^{QE}$ is the nuclear scaling function.%\vspace{-0.25em}
+\end{itemize}
+
+In the Bosted parameterization~\cite{Bosted_fit,Bosted:2007xd} the Sachs form factors are calculated according to Ref.~\cite{Bosted:1994tm}, which provides an empirical fit to the world data for the proton elastic electromagnetic form factors in the range 0 GeV$^{2}$$< Q^{2} <$ 30 GeV$^{2}$ and to the neutron electromagnetic form factors in the range 0 GeV$^{2}$$< Q^{2} <$ 10 GeV$^{2}$. 
+
+
+For the case of scattering of a deuterium nucleus the Bosted parameterization~\cite{Bosted_fit,Bosted:2007xd} in its default implementation estimates the nuclear scaling function using a PWIA calculation and the Paris deuteron wave function (see Ref.~\cite{Bosted:2007xd} for details). For heavier nuclei it uses the following parameterization of the scaling function taken from Ref.~\cite{Bodek:2014pka},%\vspace{-0.25em}
+
+\begin{equation}
+F^{QE}(\psi') = \frac{1.5576}{K_{F}[1 + 1.7720^{2}(\psi' + 0.3014)^{2}](1 + e^{-2.4291\psi'})}.\label{eq:fqe_scaling}
+\end{equation}
+
+Here $\psi'$ is the scaling variable defined in Refs.~\cite{Bodek:2014pka,Amaro:2004bs} and $K_{F}$ is the nucleus Fermi momentum.
+
+
+In general, the parameterization of the nuclear scaling function given by Eq.~\eqref{eq:fqe_scaling} is applicable for all nuclei from deuterium to lead~\cite{Bodek:2014pka}. In the Bosted parameterization for the case of a deuterium nucleus one can switch from the default way of the scaling function calculation to this alternative way upon minor modifications of the source code.
+
+

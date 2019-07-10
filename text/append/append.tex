@@ -1,0 +1,205 @@
+
+\appendix
+
+
+%\renewcommand{\thechapter}{A}
+ \refstepcounter{chapter}
+    \makeatletter
+   \renewcommand{\theequation}{\thechapter.\@arabic\c@equation}
+    \makeatother
+\chapter*{Appendices}
+\label{app}
+\addcontentsline{toc}{chapter}{Appendices}
+
+
+
+
+\renewcommand{\thesection}{A}
+ \refstepcounter{section}
+    \makeatletter
+   \renewcommand{\theequation}{\thesection.\@arabic\c@equation}
+    \makeatother
+\section*{Appendix A: Formalism of the $ep$ scattering}
+\label{app_formalism}
+\addcontentsline{toc}{section}{A: Formalism of the $ep$ scattering}
+
+\subsection*{Elastic $ep$ scattering}
+
+The cross section for the elastic scattering of an electron off a nucleon~\cite{Halzen:1984mc,Close:1979bt,Povh:1995mua} can be described as:
+\begin{equation}
+\frac{d^{2}\sigma}{d\Omega d E'} = \left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott}  \left [ \frac{G_{E}^{2}(Q^{2}) + \tau G_{M}^{2}(Q^{2}) }{1+\tau} + 2\tau G_{M}^{2}(Q^{2}) \tan^{2}{\frac{\theta_{e'}}{2}} \right ] \delta\left ( \nu - \frac{Q^{2}}{2m_{N}} \right),\label{eq_p_elast1}
+\end{equation}
+where $E'$ and $\theta_{e'}$ are the energy and polar angle of the scattered electron in the laboratory frame, respectively, $\nu = E-E'$ is the photon energy with $E$ being the laboratory energy of the incoming electron, $Q^{2}$ the photon virtuality, $m_{N}$ the nucleon mass, and $\tau = \frac{|Q^{2}|}{4m_{N}^{2}}$.
+
+In Eq.~\eqref{eq_p_elast1} the Mott cross section\footnote[7]{Following the notation of  Ref.~\cite{Povh:1995mua}, the asterisk superscript indicates that Mott cross section formula does not include the factor $E'/E$.} is defined according to Eq.~\eqref{eq:mott} and $G_{E}(Q^{2})$ and $G_{M}(Q^{2})$ are the electric and magnetic nucleon form factors (or Sachs form factors).
+
+
+Upon integration over $d E'$, Eq.~\eqref{eq_p_elast1} takes the following form.\footnote[8]{The following relation was used $\int dx \delta\left ( f(x) \right ) = \left [ df/dx \right ]^{-1}$.}
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott} \left [1+\frac{2E}{m_{N}}\sin^{2} \frac{\theta_{e'}}{2} \right ]^{-1}   \left [ \frac{G_{E}^{2}(Q^{2}) + \tau G_{M}^{2}(Q^{2}) }{1+\tau} + 2\tau G_{M}^{2}(Q^{2}) \tan^{2}{\frac{\theta_{e'}}{2}} \right ].\label{eq_p_elast2}
+\end{equation}
+
+ 
+Taking into account the fact that according to the energy conservation
+\begin{equation}
+1+\frac{2E}{m_{N}}\sin^{2} \frac{\theta_{e'}}{2} = \frac{1}{E'}\left ( E' + \frac{Q^{2}}{2m_{N}} \right ) = \frac{E}{E'}, 
+\end{equation}
+one can obtain the more commonly used formula, i.e. 
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott} \left [ \frac{E'}{E} \right ]   \left [ \frac{G_{E}^{2}(Q^{2}) + \tau G_{M}^{2}(Q^{2}) }{1+\tau} + 2\tau G_{M}^{2}(Q^{2}) \tan^{2}{\frac{\theta_{e'}}{2}} \right ],\label{eq_p_elast3}
+\end{equation}
+where the factor $E'/E$ accounts for the recoil of the target nucleon.
+
+
+Meanwhile, the elastic scattering cross section is often written in terms of the form factors $F_{1}(Q^{2})$ and $F_{2}(Q^{2})$ as
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott} \left [ \frac{E'}{E} \right ]   \left [ F^{2}_{1}(Q^{2}) + \chi^{2} \tau F^{2}_{2}(Q^{2})  + 2\tau \left [F_{1}(Q^{2}) + \chi F_{2}(Q^{2}) \right ]^{2} \tan^{2}{\frac{\theta_{e'}}{2}} \right ],\label{eq_p_elast3}
+\end{equation}
+where $\chi$ is the nucleon magnetic moment.
+
+
+The relations between $G_{E}(Q^{2})$,  $G_{M}(Q^{2})$ and $F_{1}(Q^{2})$, $F_{2}(Q^{2})$ are the following.
+\begin{equation}
+\begin{aligned}
+&G_{E}(Q^{2}) &=~& F_{1}(Q^{2}) - \chi \tau F_{2}(Q^{2})\\
+&G_{M}(Q^{2}) &=~& F_{1}(Q^{2}) + \chi F_{2}(Q^{2})
+\label{eq:el_f1_f2}
+\end{aligned}
+\end{equation}
+
+\subsection*{Inelastic $ep$ scattering}
+
+By analogy with the elastic scattering case, the cross section for the inelastic scattering of an electron off a nucleon~\cite{Halzen:1984mc,Close:1979bt,Povh:1995mua} can be described as:
+\begin{equation}
+\frac{d^{2}\sigma}{d\Omega d E'} = \left [\frac{\alpha}{Q^2}\right ]^{2} \left [\frac{E'}{E}\right ] L_{e}^{\mu \nu}W_{\mu \nu} =  \left [ \frac{d\sigma}{d\Omega} \right ]^{*}_{Mott}   \left [ W_{2}(Q^{2},\nu) + 2W_{1}(Q^{2},\nu)\tan^{2}{\frac{\theta_{e'}}{2}} \right ],\label{eq:p_inelast}
+\end{equation}
+where $L_{e}^{\mu \nu}W_{\mu \nu}$ is the convolution of the leptonic and hadronic tensors, while $W_{1}(Q^{2},\nu)$ and $W_{2}(Q^{2},\nu)$ are two dimensionful structure functions. They are usually replaced by the corresponding two dimensionless structure functions as
+\begin{equation}
+\begin{aligned}
+&F_{1}(Q^{2},x) &=~& m_{N}W_{1}(Q^{2},\nu)~\textrm{and} \\
+&F_{2}(Q^{2},x) &=~& \nu W_{2}(Q^{2}, \nu),
+\label{eq:dimless_str_f}
+\end{aligned}
+\end{equation}
+where $x=\frac{Q^{2}}{2 \nu m_{N}}$ is the Bjorken scaling variable. One should not confuse these structure functions with $F_{1}(Q^{2})$ and $F_{2}(Q^{2})$ elastic scattering form factors from Eqs.~\eqref{eq_p_elast3} and~\eqref{eq:el_f1_f2}.
+
+Comparing Eq.~\eqref{eq:p_inelast} with Eq.~\eqref{eq_p_elast1} one can conclude that for the elastic scattering~\cite{Close:1979bt} 
+\begin{equation}
+\begin{aligned}
+&W_{1}^{el}(Q^{2},\nu) &=~& \tau G_{M}^{2}(Q^{2})\delta\left ( \nu - \frac{Q^{2}}{2m_{N}} \right)~\textrm{and}  \\
+&W_{2}^{el}(Q^{2},\nu) &=~& \frac{G_{E}^{2}(Q^{2}) + \tau G_{M}^{2}(Q^{2}) }{1+\tau} \delta\left ( \nu - \frac{Q^{2}}{2m_{N}} \right).
+\label{eq:rel_str_fun}
+\end{aligned}
+\end{equation}
+
+
+\newpage
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{B.\arabic{table}}
+
+\renewcommand{\thesection}{B}
+ \refstepcounter{section}
+    \makeatletter
+   \renewcommand{\theequation}{\thesection.\@arabic\c@equation}
+    \makeatother
+\section*{B: Measured elastic $ep$ cross sections versus parameterized}
+\label{app_epelas}
+\addcontentsline{toc}{section}{B: Measured elastic $ep$ cross sections versus parameterized}
+
+
+
+ 
+
+
+\begin{table}[htp]
+
+\caption{\small Values of experimental $ep$ elastic cross sections ($\left [ \frac{d\sigma}{d\Omega} \right ]_{exp}$) provided with their total uncertainties $\varepsilon_{exp}$ and the corresponding values obtained from the Bosted parameterization ($\left [ \frac{d\sigma}{d\Omega} \right ]_{par}$). The last column contains their ratios. The coloring of the table cells is related to the corresponding deviation of the obtained ratio from unity: the dark-green shade stands for deviations $\leq 5$\%, light-green for 5\%-10\%, and light-red shows deviations of more than 10\%. Experimental values$^\dag$~were taken from Refs.~\cite{Goitein:1970pz,Sill:1992qw,Christy:2004rc} and were picked up in a way that they cover relatively evenly the $Q^{2}$ range from $\sim$0.3~GeV$^{2}$ to $\sim$5~GeV$^{2}$.}\label{tab:epelast}
+\centering
+\begin{tabular}{
+   !{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  c!{\vrule width 1pt}
+  }
+\toprule[2pt]
+\makecell{Exp.\\ Ref.}& \makecell{$E_{beam}$\\ (GeV)} &\makecell{$Q^{2}$\\ (GeV$^2$)} & \makecell{$\left [ \frac{d\sigma}{d\Omega} \right ]_{exp}$\\ (nb/sr)}&\makecell{$\varepsilon_{exp}$ (\%)} & \makecell{$\left [ \frac{d\sigma}{d\Omega} \right ]_{par}$\\ (nb/sr)}& $\left [ \frac{d\sigma}{d\Omega} \right ]_{exp}/\left [ \frac{d\sigma}{d\Omega} \right ]_{par}$  \\ \hline
+\multirow{6}{*}{\cite{Goitein:1970pz}}& 1.578  & 0.2725 &7.675E2  & 2.1  &7.808E2   & \cellcolor{green!35}0.98 \\ \hhline{|~|------|}
+%& 1.904  & 0.3894 &4.119E2  & 2.2  &3.858E2   & 1.07 \\ \hline
+%& 2.362  & 0.5840 &1.564E2  & 2.6  &1.544E2   & 1.01 \\ \hline
+%& 2.758  & 0.7787 &7.595E1  & 2.3  &7.409E1   & \cellcolor{green!35}1.03 \\ \hhline{|~|------|}
+& 3.440  & 1.168  &2.304E1  & 2.9  &2.313E1   & \cellcolor{green!35}1.00 \\ \hhline{|~|------|}
+& 4.308  & 1.752  &5.792E0  & 3.3  &6.088E0   & \cellcolor{green!35}0.95 \\ \hhline{|~|------|}
+& 5.500  & 2.725  &1.209E0  & 5.2  &1.126E0   & \cellcolor{green!20}1.07 \\ \hhline{|~|------|}
+%& 6.000  & 2.920  &9.58E-1  & 8.1  &9.76E-1   & 0.98 \\ \hline
+& 6.000  & 3.504  &3.64E-1  & 4.6  &3.280E-1   & \cellcolor{red!20}1.11 \\ \hhline{|~|------|}
+%& 5.500  & 3.894  &1.35E-1  & 5.6  &1.25E-1   & 1.08 \\ \hline
+\multirow{6}{*}{\cite{Sill:1992qw}}& 6.000  & 4.478  &7.25E-2  & 5.6  &6.606E-2   & \cellcolor{green!20}1.10 \\ \midrule[2pt]
+& 5.464  & 2.862  &8.02E-1  & 3.8  &8.361E-1   & \cellcolor{green!35}0.96 \\ \hhline{|~|------|}
+& 5.464  & 3.621  &1.93E-1  & 4.2  &1.974E-1   & \cellcolor{green!35}0.98  \\ \hhline{|~|------|}
+%& 6.657  & 4.991  &4.55E-2  & 4.0  &4.54E-2   & 1.00 \\ \hline
+\multirow{8}{*}{\cite{Christy:2004rc}}& 5.499  & 5.017  &2.04E-2  & 3.7  &2.076E-2   & \cellcolor{green!35}0.98 \\ \midrule[2pt]
+& 1.148  & 0.62   &1.734E1  & 1.9     &1.735E1   & \cellcolor{green!35}1.00 \\\hhline{|~|------|}
+%& 1.882  & 0.8995 &1.464E1  &      &1.447E1   & 1.01 \\ \hline
+& 2.235  & 1.6348 &1.184E0  & 2.0     &1.180E0    & \cellcolor{green!35}1.00 \\ \hhline{|~|------|}
+& 3.114  & 2.6205 &2.125E-1 & 2.0     &2.153E-1  &\cellcolor{green!35} 0.99 \\ \hhline{|~|------|}
+& 4.104  & 3.7981 &4.919E-2 & 2.0     &4.865E-2  & \cellcolor{green!35}1.01  \\ \hhline{|~|------|}
+%& 4.104  & 4.4004 &1.582E-2 &      &1.544E-2  & 1.03  \\ \hline
+& 4.413  & 4.7957 &1.098E-2 & 2.7     &1.082E-2  & \cellcolor{green!35}1.02  \\\hhline{|~|------|}
+& 5.494  & 5.3699 &1.267E-2 & 2.5     &1.216E-2  & \cellcolor{green!35}1.04  \\ \bottomrule[2pt]
+\end{tabular}
+%\end{center}
+ \end{table}
+
+%{\begin{tabular}{l}
+$^\dag$\footnotesize {\centering Note that studies in Refs.~\cite{Goitein:1970pz,Sill:1992qw,Christy:2004rc} contain more measurements than given in the table, which is intended to reflect the overall behavior of the data description and hence shows just a small sample of typical examples.}
+% \end{tabular}
+\normalsize 
+%\footnotetext{Note that studies in Refs.~\cite{Goitein:1970pz,Sill:1992qw,Christy:2004rc} contain more measurements than shown in the table, which is intended to show just a small sample of typical examples.}
+%\rule{0in}{1.2em}$^\dag$\scriptsize This is the footnote text
+%\protect\footnotemark
+\newpage
+
+
+
+
+\renewcommand{\thesection}{C}
+ \refstepcounter{section}
+    \makeatletter
+   \renewcommand{\theequation}{\thesection.\@arabic\c@equation}
+    \makeatother
+\section*{C: Some related tools}
+\label{app_tools}
+\addcontentsline{toc}{section}{C: Some related tools}
+
+
+
+The following tools may be of use for those interested in studying quasi-elastic and inclusive deuteron spectra.
+
+\begin{itemize}
+
+
+\item The set of various fits by Peter Bosted, which includes but is not limited to the parameterizations for quasi-elastic and inelastic structure functions for nuclei, is located on Peter Bosted's web page at \url{https://userweb.jlab.org/~bosted/fits.html}. It contains FORTRAN subroutines provided with a C++ Wrapper package.
+
+\item The FORTRAN subroutine {\it elas} that returns the elastic cross section of electron scattering off free protons as a function of the electron scattering angle is available at \url{https://github.com/skorodumina/deuteron\_quasi\_elastic/blob/master/PBosted\_model/F1F209.f}. This subroutine employs a Bosted parameterization of nucleons electromagnetic form factors according to Ref.~\cite{Bosted:1994tm}.
+
+\item The FORTRAN subroutine {\it elasrad} that returns radiated elastic cross section of electron scattering off free protons is located at \url{https://github.com/skorodumina/deuteron\_quasi\_elastic/blob/master/PBosted\_model/F1F209.f}. This subroutine employs radiative effects according to Ref.~\cite{Mo:1968cg}.
+
+\item The description of QUEGG, which is a Monte Carlo event generator for quasi-elastic scattering on deuterium, is given in Ref.~\cite{QUEGG} together with the link to the source code and the running instructions.
+
+\item A slightly modified version of the QUEGG source code that provides BOS output is available at \url{https://github.com/skorodumina/deuteron\_quasi\_elastic/tree/master/QUEEG}.
+
+\item An alternative event generator for both quasi-elastic and inclusive radiated spectra off the deuteron exists, which is based on data from Ref.~\cite{Osipenko_f2note,Osipenko:2005gt}. To use this event generator one should contact directly Dr. Mikhail Osipenko.
+
+ \end{itemize}
+
+
+\newpage
+
+
+
+
